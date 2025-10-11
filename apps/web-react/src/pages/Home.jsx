@@ -10,6 +10,7 @@ import AboutUs from '../components/Home/AboutUs/AboutUs.jsx'
 import Footer from '../components/Global/Footer/footer.jsx';
 import Sponsors from '../components/Home/Sponsors/Sponsors.jsx'
 
+import Hero from '../components/Home/Hero/Hero.jsx'
 function Home() {
   const cards = [{
     name: 'Salman Khan',
@@ -39,6 +40,7 @@ function Home() {
 
   return (
     <div className='bg-black w-full overflow-x-hidden'>
+      <Hero/>
       <CountdownTimer />
       <Gallery />
       <Carousel items={cards} /> 

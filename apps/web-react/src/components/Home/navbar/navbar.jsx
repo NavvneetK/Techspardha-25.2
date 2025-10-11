@@ -84,13 +84,13 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`top-0 py-5 bg-black z-[999] transition-all duration-300 flex items-center justify-center ${
+      className={`absolute md:top-3 left-0 w-full py-5 bg-transparent z-[999] transition-all duration-300 flex items-center justify-center ${
         isScrolled ? "translate-y-2" : "translate-y-0"
       }`}
     >
       <div
         className={`sticky top-0 text-white px-3 py-2 rounded-full flex items-center justify-between w-full sm:w-auto md:max-w-5xl shadow-[0_0_10px_2px_rgba(255,140,0,0.8)] ${
-          isScrolled ? "bg-black/40 backdrop-blur-sm" : "bg-[#2b2b28]"
+          isScrolled ? "bg-black/50 backdrop-blur-sm" : "bg-black/40"
         }`}
       >
         {/* Mobile hamburger */}
@@ -111,9 +111,9 @@ export default function Navbar() {
 
         {/* Mobile overlay menu */}
         {typeof document !== "undefined" &&
-          ReactDOM.createPortal(
+            ReactDOM.createPortal(
             <div
-              className={`fixed inset-x-0 top-0 w-full bg-[#111] py-6 transition-all duration-300 z-[9999] md:hidden ${
+              className={`fixed inset-x-0 top-0 w-full bg-black/80 py-6 transition-all duration-300 z-[9999] md:hidden ${
                 isOpen ? "flex flex-col" : "hidden"
               }`}
             >
